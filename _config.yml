@@ -202,6 +202,11 @@ exclude:
   - /test
   - /vendor
 
+collections:
+  mlops:
+    output: true
+    permalink: /mlops/:name/
+
 defaults:
   - scope:
       path: ""
