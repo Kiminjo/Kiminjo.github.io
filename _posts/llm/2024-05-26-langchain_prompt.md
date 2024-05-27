@@ -4,6 +4,7 @@ title: Langchain의 Prompt 구조
 aside:
   toc: true
 cover: /assets/ml/langchain_image.png
+excerpt: 언제봐도 헷갈리는 Langchain의 Prompt format에 대해 정리해보겠습니다.
 ---
 
 # 1. 개요 및 필요성

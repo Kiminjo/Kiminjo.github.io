@@ -4,6 +4,7 @@ title: 세계관 정보 기반 페르소나 챗봇 만들기 w.네이버 DEVIEW 
 aside:
   toc: true
 cover: /assets/ml/persona_3_component.png
+excerpt: 캐릭터의 페르소나를 담은 챗봇을 만드는 방법에 대해 알아보겠습니다.
 ---
 
 페르소나, 사전적 의미로 '외적인 인격'을 뜻하는데요.
