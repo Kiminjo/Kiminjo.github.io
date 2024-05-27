@@ -4,6 +4,7 @@ title: MySQL 설정 방법, 명령어, 키워드 및 자료구조 정리
 aside:
   toc: true
 cover: /assets/backend_mlops/mysql_thumbnail.jpg
+excerpt: MySQL의 설치 방법과 초기 세팅 방법, 기본적인 명령어에 대해서 알아보겠습니다.
 ---
 
 # 0. 설치
