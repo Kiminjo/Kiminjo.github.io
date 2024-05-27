@@ -207,6 +207,9 @@ collections:
   mlops:
     output: true
     permalink: /mlops/:name/
+  llm:
+    output: true
+    permalink: /llm/:name/
 
 defaults:
   - scope:
