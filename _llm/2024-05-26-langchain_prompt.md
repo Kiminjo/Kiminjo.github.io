@@ -16,7 +16,7 @@ excerpt: 언제봐도 헷갈리는 Langchain의 Prompt format에 대해 정리�
 
 <br>
 
-```
+```python
 system_prompt_template = "Tell me a {adjective} joke about {content}."
 system_prompt = system_prompt_template.format(**{
                                                  "adjective": "funny",
@@ -37,7 +37,7 @@ completion = client.chat.completions.create(model="model-identifier",
 
 -   Langchain prompt template
 
-```
+```python 
 from langchain_core.prompts import PromptTemplate
 
 system_prompt_template = "Tell me a {adjective} joke about {content}."
@@ -64,7 +64,7 @@ chain = prompt | llm
 
 <br>
 
-```
+```python
 """
 Hello. My name is Injo. How are you? 
 """ 
@@ -78,7 +78,7 @@ Hello. My name is Injo. How are you?
 
 <br>
 
-```
+```python
 # name 변수에 실제 사람 이름을 넣어야함 
 
 """
@@ -102,9 +102,10 @@ Hello. My name is {name}. How are you?
 
 <br>
 
-```
+```python
 # 방식 1. template을 먼저 지정한 후, format 함수를 이용해 templating 
 # langchain에서도 추천하는 방식 
+
 from langchain_core.prompts import PromptTemplate
 
 prompt_template = PromptTemplate.from_template(
@@ -115,7 +116,7 @@ prompt_template.format(adjective="funny", content="chickens")
 
 <br>
 
-```
+```python
 # 방식 2. template 지정과 변수할당을 동시에 하는 방식
 # 복잡하고 langchain에서도 추천하지는 않는 방식
 
@@ -138,7 +139,7 @@ prompt = PromptTemplate(input_variables=["foo"], template="Say {foo}")
 
 <br>
 
-```
+```python
 # 방법 1. str을 이용해 ChatPromptTemplate을 지정하는 방식 
 # role을 튜플 형태로 명시해줘야함
 
@@ -158,7 +159,7 @@ messages = chat_template.format_messages(name="Bob", user_input="What is your na
 
 <br>
 
-```
+```python
 # 방법 2. MessagePrompt(SystemMessage, HumanMessage) 등을 이용해서 프롬프트를 지정하는 방식
 
 from langchain_core.messages import SystemMessage
@@ -203,7 +204,7 @@ print(messages)
 
 <br>
 
-```
+```python
 # 정적인 프롬프트 
 # messages function 사용 
 
@@ -223,7 +224,7 @@ content="""\
 
 <br>
 
-```
+```python
 # 동적인 프롬프트 
 # templates function 사용 
 
@@ -261,7 +262,7 @@ LCEL: LangChain Expression Language
 
 <br>
 
-```
+```python
 # invoke method 
 # python str의 format과 유사 
 
@@ -278,10 +279,10 @@ prompt_val = prompt_template.invoke({"adjective": "funny", "content": "chickens"
 
 # 5. 내가 사용하는 방식
 
-- set\_prompt method 구성
+- `set_prompt` method 구성
     -   용도: System prompt 및 Fewshot prompt 설정
 
-```
+```python
 from langchain_core.prompts import SystemMessagePromptTemplate, ChatPromptTemplate
 
 def set_prompt():
@@ -301,7 +302,7 @@ def set_prompt():
 
 - user message 추가 후 LLM 모델에서 RUN
 
-```
+```python
 from langchain_core.messages import HumanMessage
 
 def generate(query: str): 
