@@ -210,6 +210,10 @@ collections:
   llm:
     output: true
     permalink: /llm/:name/
+  basic_programming:
+    output: true
+    permalink: /others/:name/
+
 
 defaults:
   - scope:
