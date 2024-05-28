@@ -48,7 +48,7 @@ header:
     # Basic programming
   - titles:
       # @start locale config
-      en      : &EN       Basic Programming
+      en      : &EN       Others
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
@@ -58,7 +58,7 @@ header:
       zh-SG   : *ZH_HANS
       zh-TW   : *ZH_HANT
       zh-HK   : *ZH_HANT
-      ko      : &KO       Basic Programming
+      ko      : &KO       Others
       ko-KR   : *KO
       fr-BE   : *FR
       fr-CA   : *FR

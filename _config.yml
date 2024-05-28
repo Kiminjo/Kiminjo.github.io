@@ -211,10 +211,11 @@ collections:
   llm:
     output: true
     permalink: /llm/:name/
-  basic_programming:
+  others:
     output: true
     permalink: /others/:name/
 
+highlight_theme: tomorrow-night # "default" (default), "tomorrow", "tomorrow-night", "tomorrow-night-eighties", "tomorrow-night-blue", "tomorrow-night-bright"
 
 defaults:
   - scope:
