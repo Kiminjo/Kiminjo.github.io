@@ -67,6 +67,7 @@ paths:
   archive : "/archive.html"
   llm     : "/llm.html"
   mlops   : "/mlops.html"
+  basic_programming: "/others.html"
   rss     : # "/feed.xml" (default)
 
 
