@@ -2,7 +2,7 @@ header:
   # LLM 
   - titles:
       # @start locale config
-      en      : &EN       LLM
+      en      : &EN       ML/LLM
       en-GB   : *EN
       en-US   : *EN
       en-CA   : *EN
@@ -12,7 +12,7 @@ header:
       zh-SG   : *ZH_HANS
       zh-TW   : *ZH_HANT
       zh-HK   : *ZH_HANT
-      ko      : &KO       LLM
+      ko      : &KO       ML/LLM
       ko-KR   : *KO
       fr-BE   : *FR
       fr-CA   : *FR
