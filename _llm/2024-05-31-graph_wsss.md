@@ -119,10 +119,6 @@ Label Propagation은 특정 데이터의 클래스 정보를 기반으로 인접
 
 <br>
 
-Weak labels 
-
-<br>
-
 - Scribble Annotations
 - Bounding Box Annotations
 
@@ -263,7 +259,7 @@ Deep Learning Network에서는 layer가 deep 해질수록 더 semantic한 정보
 
 <br>
 
-## 3-1-2. Edge 생성 
+### 3-1-2. Edge 생성 
 
 <br>
 
