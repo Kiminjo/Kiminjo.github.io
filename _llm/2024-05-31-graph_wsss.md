@@ -212,8 +212,10 @@ superpixel이란 의미론적으로 비슷한 영역을 하나의 거대한 픽�
 
 <br>
 
+
 **노드를 생성했다! - superpixel map**
 {:.success} 
+
 
 <br>
 
