@@ -230,6 +230,19 @@ defaults:
       show_edit_on_github: true
       show_subscribe: true
       pageview: true
+  ## MLOPS
+  - scope:
+      path: "_mlops/docker"
+    values:
+      layout: article
+      nav_key: mlops
+      aside:
+        toc: true
+      side_bar:
+        nav: docker
+      show_edit_on_github: true
+      show_subscribe: true
+      pageview: true
 
 
 ## => Plugins
