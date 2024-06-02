@@ -1,4 +1,28 @@
 header:
+  # Projects
+  - titles:
+      # @start locale config
+      en      : &EN       Projects
+      en-GB   : *EN
+      en-US   : *EN
+      en-CA   : *EN
+      en-AU   : *EN
+      zh      : *ZH_HANS
+      zh-CN   : *ZH_HANS
+      zh-SG   : *ZH_HANS
+      zh-TW   : *ZH_HANT
+      zh-HK   : *ZH_HANT
+      ko      : &KO       Projects
+      ko-KR   : *KO
+      fr-BE   : *FR
+      fr-CA   : *FR
+      fr-CH   : *FR
+      fr-FR   : *FR
+      fr-LU   : *FR
+      # @end locale config
+    url: /projects.html
+
+
   # LLM 
   - titles:
       # @start locale config
@@ -125,3 +149,9 @@ docker:
     children:
       - title:  Docker 기본 명령어
         url:    /mlops/docker_base
+
+my_foundation:
+  - title:      My Foundation Model
+    children:
+      - title:  "나만의 Foundation 모델 라이브러리 만들기 - Overview"
+        url:    /projects/my_foundations/overview
