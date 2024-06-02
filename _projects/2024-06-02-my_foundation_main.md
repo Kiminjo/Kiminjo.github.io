@@ -4,6 +4,8 @@ title: "나만의 Foundation 모델 라이브러리 만들기 - Overview"
 permalink: /projects/my_foundations/overview
 aside:
   toc: true
+sidebar:
+  nav: my_foundation
 cover: /assets/projects/my-foundations/llm_thumbnail.png
 excerpt: 
 ---
