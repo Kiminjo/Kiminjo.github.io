@@ -20,7 +20,7 @@ header:
       fr-FR   : *FR
       fr-LU   : *FR
       # @end locale config
-    url: /projects.html
+    url: /myprojects.html
 
 
   # LLM 

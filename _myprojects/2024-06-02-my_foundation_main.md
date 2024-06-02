@@ -7,7 +7,8 @@ aside:
 sidebar:
   nav: my_foundation
 cover: /assets/projects/my-foundations/llm_thumbnail.png
-excerpt: 
+tags: my_foundations
+excerpt: 저만의 Custom Foundation Model용 라이브러리를 구축한 이유와 주요 모델들에 대해 설명드릴게요.
 ---
 
 
