@@ -68,7 +68,7 @@ paths:
   llm     : "/llm.html"
   mlops   : "/mlops.html"
   basic_programming: "/others.html"
-  projects: "/myprojects.html"
+  myprojects: "/myprojects.html"
   rss     : # "/feed.xml" (default)
 
 
@@ -206,7 +206,7 @@ exclude:
   - /vendor
 
 collections:
-  projects:
+  myprojects:
     output: true
     permalink: /myprojects/:name/
   mlops:
