@@ -205,6 +205,9 @@ exclude:
   - /vendor
 
 collections:
+  projects:
+    output: true
+    permalink: /side_projects/:name/
   mlops:
     output: true
     permalink: /mlops/:name/
