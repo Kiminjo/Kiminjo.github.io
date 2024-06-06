@@ -214,12 +214,12 @@ db_path = "db/president.index"
 # Get LLM Model
 factory = TextModelFactory()
 openai_llm = factory.create_model(model_type="openai", 
-								model_name="gpt-3.5-turbo", 
-								api_key=openai_api_key)
+model_name="gpt-3.5-turbo", 
+api_key=openai_api_key)
 
 openai_embedding = factory.create_embedding_model(model_type="openai", 
-												model_name="text-embedding-ada-002", 
-												api_key=openai_api_key)
+model_name="text-embedding-ada-002", 
+api_key=openai_api_key)
 
 rag_model = RAG(llm_model=openai_llm,
 				embedding_model=openai_embedding)
