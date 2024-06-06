@@ -68,7 +68,7 @@ excerpt: 저만의 Custom Foundation Model용 라이브러리를 구축한 이�
 
 ### 3-1. Text 
 
-**Models** 
+**platforms** 
 - OpenAI 
 - Ollama
 - Groq 
