@@ -213,9 +213,13 @@ db_path = "db/president.index"
 
 # Get LLM Model
 factory = TextModelFactory()
-openai_llm = factory.create_model(model_type="openai", model_name="gpt-3.5-turbo", api_key=openai_api_key)
+openai_llm = factory.create_model(model_type="openai", 
+								model_name="gpt-3.5-turbo", 
+								api_key=openai_api_key)
 
-openai_embedding = factory.create_embedding_model(model_type="openai", model_name="text-embedding-ada-002", api_key=openai_api_key)
+openai_embedding = factory.create_embedding_model(model_type="openai", 
+												model_name="text-embedding-ada-002", 
+												api_key=openai_api_key)
 
 rag_model = RAG(llm_model=openai_llm,
 				embedding_model=openai_embedding)
@@ -225,9 +229,7 @@ rag_model.fit(documents=documents,
 			  db_path=db_path)
 
 # Search the database and get the related document
-related_document = rag_model.search(message=query,
-									db_path=db_path,
-									top_k=1)
+related_document = rag_model.search(message=query, db_path=db_path, top_k=1)
 
   
 print("RAG Response:")
@@ -240,8 +242,7 @@ searched_prompt = UserMessage().set_prompt(prompt=input_for_rag.format(document=
 openai_llm.input_prompt.append(searched_prompt)
 
 # Generate the response
-openai_response = openai_llm.generate(prompt=query,
-									  save_previous=True)
+openai_response = openai_llm.generate(prompt=query, save_previous=True)
 ```
 
 <br>
