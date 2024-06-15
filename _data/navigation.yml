@@ -91,6 +91,8 @@ header:
       fr-LU   : *FR
       # @end locale config
     url: /others.html
+    # 최신 문서가 가장 먼저 나오도록 설정 
+    paginate_reverse: true
     
   - titles:
       # @start locale config
