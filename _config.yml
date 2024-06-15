@@ -102,6 +102,7 @@ chart: # false (default), true
 ##############################
 paginate: 8
 paginate_path: /page:num # don't change this unless for special need
+paginate_reverse: false  # false로 설정해서 최신 글이 먼저 오도록 합니다.
 
 
 ## => Sources

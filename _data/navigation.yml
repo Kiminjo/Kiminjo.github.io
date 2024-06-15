@@ -161,5 +161,5 @@ my_foundation:
 pyqt:
   - title:     PyQt Series
     children:
-      - title:  PyQT TreeWidget을 사용한 문서 계층 구조 표현하기
+      - title:  PyQT TreeWidget을 사용하여 문서 계층 구조 표현하기
         url:    /others/pyqt_tree
