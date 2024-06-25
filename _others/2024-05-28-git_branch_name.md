@@ -1,10 +1,16 @@
 ---
 layout: article
 title: Git branch 이름 변경하기
+permalink: /others/git_branch_rename
 aside:
   toc: true
+sidebar:
+  nav: github
 cover: /assets/others/github.jpeg
 excerpt: Git의 branch 이름을 변경하는 방법에 대해 알아보겠습니다.
+tags:
+  - git 
+  - branch
 ---
 
 # 1. 문제 상황

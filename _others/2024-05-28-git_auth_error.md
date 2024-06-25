@@ -1,6 +1,9 @@
 ---
 layout: article
 title: Git push 시 발생하는 권한 문제 해결
+permalink: /others/git_push_issue
+sidebar:
+  nav: github
 aside:
   toc: true
 cover: /assets/others/github.jpeg
