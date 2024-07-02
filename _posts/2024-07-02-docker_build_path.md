@@ -1,7 +1,6 @@
 ---
 layout: article
 title: "Docker 빌드 시 경로 지정하기"
-permalink: /mlops/docker_build_path
 aside:
   toc: true
 cover: /assets/backend_mlops/docker/docker.png
