@@ -151,6 +151,8 @@ docker:
     children:
       - title:  Docker 기본 명령어
         url:    /mlops/docker_base
+      - title: Docker 빌드 시 경로 지정하기 
+        url:    /mlops/docker_build_path
 
 my_foundation:
   - title:      My Foundation Model
