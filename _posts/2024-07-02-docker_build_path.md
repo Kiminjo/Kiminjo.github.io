@@ -6,7 +6,7 @@ aside:
 cover: /assets/backend_mlops/docker/docker.png
 tags: docker 
 sidebar:
-    - docker
+    nav: docker
 excerpt: Docker build 시 실행하고자하는 도커 파일의 경로를 지정해줍시다. 
 ---
 
