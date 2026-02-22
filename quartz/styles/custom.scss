@@ -1,3 +1,375 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+/* Premium Typography */
+body {
+    letter-spacing: -0.015em;
+    line-height: 1.7;
+}
+
+/* Elegant Sidebar Formatting */
+.sidebar {
+    gap: 2rem;
+    font-size: 0.85rem;
+    /* Smaller sidebar font */
+}
+
+/* Sidebar Sections (Explorer & TOC) as Frosted Cards */
+.sidebar>div {
+    background: rgba(var(--light), 0.65);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--lightgray);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+}
+
+.sidebar a {
+    color: var(--gray);
+    font-weight: 500;
+}
+
+.sidebar a:hover {
+    color: var(--dark);
+}
+
+/* Apple-style Rounded Center Body */
+.center {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto;
+    background-color: var(--light);
+    border-radius: 24px;
+    padding: 3rem 4rem;
+    box-sizing: border-box;
+    /* Prevent padding from causing overflow */
+    box-shadow: 0 12px 48px rgba(0, 0, 0, 0.05);
+    /* Soft, diffuse shadow */
+    border: 1px solid var(--lightgray);
+    transition: all 0.3s ease;
+}
+
+@media all and (max-width: 800px) {
+    .center {
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+    }
+}
+
+/* Subtle page background so the white card pops */
+body {
+    background-color: #FAFAFA;
+    /* Soft light gray to contrast with pure white card */
+    letter-spacing: -0.015em;
+    line-height: 1.75;
+    /* Improved legibility */
+}
+
+body[saved-theme="dark"] {
+    background-color: #000000;
+}
+
+/* Elegant Code Blocks (Mac IDE Style) */
+pre {
+    position: relative;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    background-color: #282a36 !important;
+    /* Dracula Dark Theme background */
+    padding-top: 3.2rem !important;
+    /* Make room for the top bar */
+    overflow: hidden;
+}
+
+body[saved-theme="dark"] pre {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Mac-style Window Buttons */
+pre::before {
+    content: "";
+    /* empty content to draw shape */
+    position: absolute;
+    top: 14px;
+    left: 16px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    /* Red dot */
+    background: #ff5f56;
+    /* Yellow and green dots */
+    box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;
+    z-index: 2;
+}
+
+/* Elegant top bar background line for the Mac window effect */
+pre::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.05);
+    /* Slight highlight for the top bar */
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Ensure code inside the block contrasts well */
+pre code {
+    background-color: transparent !important;
+    color: #f8f8f2 !important;
+    /* Bright, highly readable text */
+    font-size: 0.9em;
+    font-family: var(--codeFont);
+    display: block;
+    overflow-x: auto;
+    border: none;
+    padding: 0 0.5rem;
+}
+
+/* Better inline code */
+code {
+    font-size: 0.85em;
+    padding: 0.2rem 0.4rem;
+    border-radius: 6px;
+    background-color: rgba(var(--secondary), 0.1);
+    color: var(--secondary);
+    border: 1px solid rgba(var(--secondary), 0.2);
+    font-family: var(--codeFont);
+}
+
+body[saved-theme="dark"] code {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e2e8f0;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+body[saved-theme="dark"] pre code {
+    border: none;
+    background-color: transparent !important;
+}
+
+/* Graph View Enhancements */
+.graph {
+    border-radius: 16px;
+    border: 1px solid var(--lightgray);
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+/* Callouts / Admonitions */
+.callout {
+    border-radius: 12px;
+    border-left-width: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+/* ---- NEW LAYOUT ADJUSTMENTS ---- */
+
+/* Hide empty Left Sidebar */
+.left.sidebar {
+    display: none !important;
+}
+
+/* Top Navigation (Header) Styling - Liquid Glass Pill */
+header {
+    width: 100%;
+    max-width: 800px;
+    box-sizing: border-box;
+    margin: 2rem auto 3rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* Push items to edges */
+    gap: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 999px;
+    /* Pill shape */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+    z-index: 50;
+    position: relative;
+}
+
+body[saved-theme="dark"] header {
+    background: rgba(20, 20, 20, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media all and (max-width: 800px) {
+    header {
+        margin: 1rem auto 2rem auto;
+        border-radius: 24px;
+        /* Less rounded on mobile */
+        padding: 1rem 1.25rem;
+        width: calc(100% - 2rem);
+    }
+}
+
+header h2.page-title {
+    flex: 0 0 auto;
+    margin: 0;
+}
+
+/* This pushes everything after it to the right */
+header .spacer {
+    flex: 1 1 auto;
+}
+
+/* Custom horizontally styled Explorer in Header */
+header .explorer {
+    margin: 0;
+    padding: 0;
+}
+
+header .explorer-toggle.desktop-explorer {
+    display: none;
+}
+
+header .explorer-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+}
+
+header .explorer-ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+header .explorer-ul li {
+    padding: 0;
+    margin: 0;
+}
+
+header .explorer-ul a {
+    color: var(--darkgray);
+    font-weight: 500;
+}
+
+header .explorer-ul a:hover {
+    color: var(--dark);
+}
+
+header .explorer-ul>li>.folder-outer {
+    display: none;
+    /* Hide subfolders in header nav for a cleaner look */
+}
+
+/* Hoverable Right Sidebar (Graph, TOC) - Dark Liquid Glass */
+@media all and (min-width: 1200px) {
+    .right.sidebar {
+        position: fixed !important;
+        top: 15vh !important;
+        /* Fixed offset from top to avoid 50% centering bugs with 100vh elements */
+        right: -320px;
+        /* Hidden off-screen */
+        transform: none !important;
+        width: 320px !important;
+        height: auto !important;
+        max-height: 80vh !important;
+        z-index: 100;
+        transition: right 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) !important;
+        padding: 0 !important;
+        background: transparent !important;
+        backdrop-filter: none !important;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Inner cards should look clean, Dark Liquid Glass */
+    .right.sidebar>div {
+        margin-bottom: 1rem;
+        background: rgba(10, 10, 10, 0.65) !important;
+        /* Dark tinted background */
+        backdrop-filter: blur(24px) saturate(180%) !important;
+        -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 16px;
+        padding: 1.5rem;
+        box-shadow: -8px 8px 32px rgba(0, 0, 0, 0.15);
+        /* Stronger shadow since it overlays */
+    }
+
+    /* Change text color inside the dark glass to be visible */
+    .right.sidebar>div,
+    .right.sidebar>div * {
+        color: #EDEDED !important;
+        /* Bright silver / white */
+    }
+
+    .right.sidebar>div h3 {
+        color: #FFFFFF !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 0.5rem;
+    }
+
+    .right.sidebar>div a:hover {
+        color: #38bdf8 !important;
+        /* Bright blue for hover on dark */
+    }
+
+    /* Invisible hover trigger zone */
+    .right.sidebar::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -80px;
+        width: 80px;
+        height: 100%;
+        cursor: pointer;
+        z-index: -1;
+    }
+
+    /* Visible handle for discovery - Dark Liquid Glass */
+    .right.sidebar::after {
+        content: "Graph ◂";
+        position: absolute;
+        top: 2rem;
+        left: -40px;
+        background: rgba(10, 10, 10, 0.65);
+        backdrop-filter: blur(16px) saturate(150%);
+        -webkit-backdrop-filter: blur(16px) saturate(150%);
+        padding: 1.5rem 0.6rem;
+        border-radius: 12px 0 0 12px;
+        font-family: var(--titleFont);
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.7);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-right: none;
+        writing-mode: vertical-rl;
+        box-shadow: -4px 0 12px rgba(0, 0, 0, 0.1);
+        pointer-events: none;
+        transition: color 0.3s ease;
+    }
+
+    /* On Hover: Slide In */
+    .right.sidebar:hover {
+        right: 2rem !important;
+    }
+
+    .right.sidebar:hover::after {
+        color: #FFFFFF;
+    }
+}

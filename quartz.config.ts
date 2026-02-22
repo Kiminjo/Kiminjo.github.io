@@ -23,31 +23,31 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Outfit",
+        header: "Inter",
         body: "Inter",
         code: "JetBrains Mono",
       },
       colors: {
         lightMode: {
-          light: "#fafafa",
-          lightgray: "#e5e5e5",
-          gray: "#a3a3a3",
-          darkgray: "#404040",
-          dark: "#171717",
-          secondary: "#0ea5e9", // vibrant sky blue
-          tertiary: "#14b8a6", // teal
-          highlight: "rgba(14, 165, 233, 0.1)",
+          light: "#FFFFFF",
+          lightgray: "#EAEAEA",
+          gray: "#888888",
+          darkgray: "#444444",
+          dark: "#111111",
+          secondary: "#0070F3", // Vercel Blue
+          tertiary: "#79FFE1",
+          highlight: "rgba(0, 112, 243, 0.1)",
           textHighlight: "rgba(250, 204, 21, 0.4)",
         },
         darkMode: {
-          light: "#0f172a", // slate 900
-          lightgray: "#1e293b", // slate 800
-          gray: "#64748b", // slate 500
-          darkgray: "#cbd5e1", // slate 300
-          dark: "#f8fafc", // slate 50
-          secondary: "#38bdf8", // bright sky blue
-          tertiary: "#2dd4bf", // bright teal
-          highlight: "rgba(56, 189, 248, 0.15)",
+          light: "#0A0A0A", // OLED black
+          lightgray: "#333333", // Dark borders
+          gray: "#888888",
+          darkgray: "#EDEDED", // Readable light text
+          dark: "#FFFFFF", // Bright headings
+          secondary: "#3291FF", // Bright blue for dark mode
+          tertiary: "#8A2BE2", // Deep purple
+          highlight: "rgba(50, 145, 255, 0.15)",
           textHighlight: "rgba(253, 224, 71, 0.3)",
         },
       },
@@ -61,7 +61,7 @@ const config: QuartzConfig = {
       }),
       Plugin.SyntaxHighlighting({
         theme: {
-          light: "github-light",
+          light: "github-dark",
           dark: "github-dark",
         },
         keepBackground: false,
