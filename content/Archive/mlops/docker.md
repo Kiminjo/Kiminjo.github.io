@@ -1,0 +1,100 @@
+---
+layout: article
+title: Docker 기본 명령어 정리
+permalink: /mlops/docker_base
+aside:
+  toc: true
+cover: /assets/backend_mlops/docker/docker.png
+tags: docker
+sidebar:
+  nav: docker
+excerpt: Docker를 사용하는데 필수적으로 사용되는 기본 명령어에 대해 알아봅시다.
+date: '2024-06-01T00:00:00.000Z'
+---
+
+
+# 1. **도커 파일 구성하기** 
+
+<br>
+
+```shell
+# 기반이 될 이미지 선택
+FROM tiangolo/uvicorn-gunicorn-fastapi:python3.8
+
+# 작업 디렉토리 설정
+WORKDIR /app
+
+# 현재 디렉토리의 파일을 컨테이너의 /app 디렉토리로 복사
+COPY ./test /app
+
+# 필요한 패키지 설치
+RUN pip install -r requirements.txt
+
+# FastAPI 서버 실행
+CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "80"]
+```
+
+<br>
+
+- test 아래에 있는 파일을 최상단 디렉토리로 옮겨옴 
+	- 내 로컬에 `test/server.py`가 있다면, 컨테이너 내부에서는 최상단에 `server.py`가 있음 
+
+<br>
+
+<br>
+
+# 2. **빌드해서 이미지 만들기** 
+
+<br>
+
+```bash
+docker build -t my-fastapi-app .
+```
+
+<br>
+
+- 마지막에 마침표는 현재 경로에 있는 dockerfile을 빌드하겠다는 의미임 
+	- 예를 들어, `A` 폴더 아래에 있는 Dockerfile을 빌드하고 싶은 경우, 다음과 같이 dockerfile을 빌드해야함 
+	- `docker build -t my-fastapi-app ./A`
+- 위의 경우, `my-fastapi-app`이라는 이름으로 이미지가 생성됨 
+
+<br>
+
+<br>
+
+# 3. 이미지를 이용해서 컨테이너 만들기 
+
+<br>
+
+```bash
+docker run -d -p 80:80 my-fastapi-app
+```
+
+<br>
+
+- `-d`: 데몬, 백그라운드에서 실행한다. 
+- `-p 80:80`: 포트를 연결한다. 
+	- 앞의 80 -> 내 컴퓨터의 80번 포트 
+	- 뒤의 80 -> 컨테이너의 80번 포트 
+- 마지막에 이미지 명 추가 
+
+<br>
+
+<br>
+
+# 4. 컨테이너 터미널에 접속 
+
+<br>
+
+```bash
+docker exec -it my-fastapi-app /bin/bash
+```
+
+<br>
+
+- `my-fast-api`의 bash 쉘에 접속 
+
+
+<br>
+
+<br>
